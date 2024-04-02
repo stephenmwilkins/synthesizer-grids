@@ -221,8 +221,13 @@ if __name__ == "__main__":
                 for ion in hf_incident[
                     "log10_specific_ionising_luminosity"
                 ].keys():
+<<<<<<< HEAD:src/synthesizer_grids/cloudy/create_cloudy_input_grid.py
                     # get the incident log10_specific_ionising_luminosity array
                     log10_specific_ionising_luminosity_incident = hf_incident[
+=======
+                    # get the incident log10_specific_ionising_lum array
+                    log10_specific_ionising_lum_incident = hf_incident[
+>>>>>>> main:create_grids/cloudy/create_cloudy_input_grid.py
                         f"log10_specific_ionising_luminosity/{ion}"
                     ][()]
 
@@ -236,7 +241,11 @@ if __name__ == "__main__":
                     # reshape array to match new shape and save
                     hf[
                         f"log10_specific_ionising_luminosity/{ion}"
+<<<<<<< HEAD:src/synthesizer_grids/cloudy/create_cloudy_input_grid.py
                     ] = np.reshape(log10_specific_ionising_luminosity, shape)
+=======
+                    ] = np.reshape(log10_specific_ionising_lum, shape)
+>>>>>>> main:create_grids/cloudy/create_cloudy_input_grid.py
 
         # add attribute with full grid axes
         hf.attrs["axes"] = axes
